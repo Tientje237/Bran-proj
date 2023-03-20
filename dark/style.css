@@ -118,7 +118,7 @@ button {
   border: 0;
   width: 100%;
   font-size: 1rem;
-  background-color: #515151;
+  background-color: #414141;
   color: white;
   border-radius: 4px;
 }
@@ -157,4 +157,16 @@ textarea {
 
 button {
   margin-bottom: 4rem;
+}
+
+h1 {
+  color: #fff;
+}
+
+h2 {
+  color: #fff;
+}
+
+p {
+  color: #fff;
 }
