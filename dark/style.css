@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  background-color: #252525;
+}
+
+/*Navbar*/
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  background: #e2000a;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: -100%;
+  height: calc(100vh - 50px);
+  background: #000;
+  transition: 0.3s;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 84vh;
+}
+
+footer {
+  background: #e2000a;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: static;
+  bottom: 0;
+  width: 100vw;
+  height: 8vh;
+  overflow-x: hidden;
+}
+
+.container {
+  margin-top: 3.5rem;
+}
+
+input:focus ~ label,
+textarea:focus ~ label,
+input:valid ~ label,
+textarea:valid ~ label {
+  font-size: 0.75em;
+  color: #999;
+  top: -5px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
+
+.styled-input {
+  float: left;
+  width: 293px;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  .styled-input {
+    width: 100%;
+  }
+}
+
+.styled-input label {
+  color: #ffffff;
+  padding: 1.3rem 30px 1rem 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide {
+  width: 650px;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #515151;
+  color: white;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+}
+
+.input-container {
+  width: 650px;
+  max-width: 100%;
+  margin: 20px auto 25px auto;
+}
+
+.styled-button {
+  float: left;
+  width: 650px;
+  max-width: 100%;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+
+button {
+  margin-bottom: 4rem;
+}
