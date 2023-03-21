@@ -66,6 +66,8 @@ footer {
   overflow-x: hidden;
 }
 
+
+/*form*/
 .container {
   margin-top: 3.5rem;
 }
@@ -170,3 +172,9 @@ h2 {
 p {
   color: #fff;
 }
+
+
+#answers {
+  display: none;
+}
+
