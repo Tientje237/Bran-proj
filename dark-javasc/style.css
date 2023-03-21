@@ -6,14 +6,39 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+
 body {
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-x: hidden;
   background-color: #252525;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background: #e2000a;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: static;
+  bottom: 0;
+  width: 100vw;
+  height: 8vh;
+  overflow-x: hidden;
+  flex-shrink: 0;
 }
 
 /*Navbar*/
@@ -54,20 +79,11 @@ nav {
   min-height: 84vh;
 }
 
-footer {
-  background: #e2000a;
-  color: #fff;
-  padding: 1rem 0;
-  text-align: center;
-  position: static;
-  bottom: 0;
-  width: 100vw;
-  height: 8vh;
-  overflow-x: hidden;
-}
+
 
 
 /*form*/
+
 .container {
   margin-top: 3.5rem;
 }
@@ -172,9 +188,3 @@ h2 {
 p {
   color: #fff;
 }
-
-
-#answers {
-  display: none;
-}
-
