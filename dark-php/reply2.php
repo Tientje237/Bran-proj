@@ -49,7 +49,9 @@
 
         <h1 style='text-align:center'>Bedankt voor het gebruiken van deze site.</h1>
 
-        <p>Op dit moment word er nog hard gewerkt aan dit project als je feedback heb hoor ik dit graag je kan me dan benaderen via mijn discord</p>
+        <p>
+          Op dit moment word er nog hard gewerkt aan dit project als je feedback heb hoor ik dit 
+          graag je kan me dan benaderen via mijn discord.</p>
 
         <br>
         <br>
