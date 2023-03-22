@@ -31,13 +31,13 @@ main {
 footer {
   background: #e2000a;
   color: #fff;
+  overflow-x: hidden;
   padding: 1rem 0;
   text-align: center;
   position: static;
   bottom: 0;
   width: 100vw;
   height: 8vh;
-  overflow-x: hidden;
   flex-shrink: 0;
 }
 
@@ -82,7 +82,7 @@ nav {
 /*form*/
 
 .container {
-  margin-top: 3.5rem;
+  margin-top: 2rem;
 }
 
 input:focus ~ label,
