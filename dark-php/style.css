@@ -224,6 +224,20 @@ p {
   background-color: aqua;
 }
 
+.righttext {
+  flex: 1;
+  height: 34rem;
+  margin-top: 2rem;
+  margin-right: 10rem;
+  margin-left: 2rem;
+  background-color: aqua;
+  padding-left: 5rem;
+}
+
+.righttext h1, p {
+  color: #000;
+}
+
 .container2 {
   margin-top: 3.5rem;
   width: 60rem;

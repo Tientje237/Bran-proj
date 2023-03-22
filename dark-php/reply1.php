@@ -12,7 +12,9 @@
 <body>
 
   <header>
-    <div class="logo">Bran-proj</div>
+    <div class="logo">
+        <a href="index.html">Bran-proj</a>
+    </div>
     <nav>
       </div>
     </nav>
@@ -52,7 +54,7 @@
         <h2 style="text-align:center">.</h2>
       </section>
       <section class="row input-container">
-        <form action="index.php" method="post">
+        <form action="reply2.php" method="post">
 
 
           <section>
@@ -89,7 +91,7 @@
 			  </section>
 
           <section class="styled-input wide">
-            <button type="submit" name="submit" id="submit">Verzenden</button>
+            <button type="submit2" name="submit2" id="submit2">Verzenden</button>
           </section>
         </form>
       </section>
