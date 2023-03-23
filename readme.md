@@ -6,7 +6,7 @@
 <br>
 <br>
 
-## To-DO
+## To-Do
 * Reply form goed krijgen zodat deze alle ingevulde gegevens laat zien als wat er ingevuld is
 * light en dark theme zodat er een keuze of een optie menu gemaakt kan worden voor dit (dit op aanvraag omdat het ook kan voorkomen dat de site gebruikt kan worden in de nacht uren, en dit dus fijner is voor de ogen.)
 * Timer toevoegen die gestart kan worden door een knop
