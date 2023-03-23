@@ -88,7 +88,8 @@ nav {
 input:focus ~ label,
 textarea:focus ~ label,
 input:valid ~ label,
-textarea:valid ~ label {
+textarea:valid ~ label,
+option:valid ~ label {
   font-size: 0.75em;
   color: #999;
   top: -5px;
@@ -171,7 +172,7 @@ textarea {
 }
 
 button {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -196,9 +197,13 @@ p {
   display: flex;
 }
 
+strong{
+  color: green;
+}
+
 .left1 {
   flex: 1;
-  height: 16rem;
+  height: 20rem;
   width: 24rem;
   margin-top: 2rem;
   margin-left: 10rem;
@@ -207,7 +212,7 @@ p {
 
 .left2 {
   flex: 1;
-  height: 16rem;
+  height: 12rem;
   width: 24rem;
   margin-top: 2rem;
   margin-left: 10rem;
