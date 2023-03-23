@@ -31,16 +31,16 @@
 
 $p1 = $_POST['1'];
 $p2 = $_POST['2'];
-$ont1 = $_POST['ont1'];
-$ont2 = $_POST['ont2'];
+$ont = $_POST['ont'];
 $heen = $_POST['heen'];
 $terug = $_POST['terug'];
-$lucht = ($p1 - $ont1);
-$lucht2 = ($p2 - $ont2);
+$lucht = ($p1 - $ont);
+$lucht2 = ($p2 - $ont);
 $tijd = ($lucht / 10);
 $tijd2 = ($lucht2 / 10);
 $inzet = ($tijd - $heen - $terug);
 $inzet2 = ($tijd2 - $heen - $terug);
+$totaalinzet = ($inzet < $inzet2);
 
 
         if(isset($_POST["submit"])){
@@ -48,16 +48,20 @@ $inzet2 = ($tijd2 - $heen - $terug);
             echo "<p style='text-align:center'>Hier zijn u ingevulde gegevens</p>";
             echo "<p>Druk van persoon 1 is: <strong>".$_POST["1"]. "</strong></p>";
             echo "<p>Druk van persoon 2 is: <strong>".$_POST["2"]. "</strong></p>";
-            echo "<p>Ontsmettings Druk van pak 1 is: <strong>".$_POST["ont1"]. "</strong></p>";
-            echo "<p>Ontsmettings Druk van pak 2 is: <strong>".$_POST["ont2"]. "</strong></p>";
+            echo "<p>Ontsmettings Druk is: <strong>".$_POST["ont"]. "</strong></p>";
             // echo "<p>Te gebruiken lucht is:  <strong>".$lucht. "</strong></p>";
             // echo "<p>Te gebruiken lucht is:  <strong>".$lucht2. "</strong></p>";
-            echo "<p>Te verbruiken tijd is: <strong>".$tijd. "</strong></p>";
-            echo "<p>Te verbruiken tijd is: <strong>".$tijd2. "</strong></p>";
+            echo "<p>Te verbruiken tijd persoon 1 is : <strong>".$tijd. "</strong></p>";
+            echo "<p>Te verbruiken tijd persoon 2 is : <strong>".$tijd2. "</strong></p>";
             echo "<p>De heenweg is <strong>".$_POST["heen"]. "</strong> minuten lang </p>";
             echo "<p>De terugweg is <strong>".$_POST["terug"]. "</strong> minuten lang </p>";
             echo "<p>Inzet tijd Persoon 1: <strong>".$inzet. "</strong></p>";
             echo "<p>Inzet tijd Persoon 2: <strong>".$inzet2. "</strong></p>";
+            if ($inzet < $inzet2) {
+              echo "<p>totale inzet is: <strong>".$inzet."</strong></p>";
+            } else {
+              echo "<p>totale inzet is: <strong>".$inzet2."</strong></p>";
+            }
 
         } else {
             echo"<h2 style='text-align:center'>U bent niet correct hier op de pagina gekomen.</h2>";
@@ -72,7 +76,7 @@ $inzet2 = ($tijd2 - $heen - $terug);
 
         <section class="right">
       <section class="row">
-        <h2 style="text-align:center">.</h2>
+      <h2 style="text-align:center">Vul de volgende velden in:</h2>
       </section>
       <section class="row input-container">
         <form action="reply2.php" method="post">
@@ -92,15 +96,9 @@ $inzet2 = ($tijd2 - $heen - $terug);
           </section>
 
           <section>
-            <section class="styled-input">
-              <input type="text" name="ont1" id="ont1" required>
-              <label for="ont1">ont 1</label>
-            </section>
-          </section>
-          <section>
-            <section class="styled-input" style="float:right;">
-              <input type="text" name="ont2" id="ont2" required>
-              <label for="ont2">ont 2</label>
+            <section class="styled-input wide">
+              <input type="text" name="ont" id="ont" required>
+              <label for="ont">ontsmetting</label> 
             </section>
           </section>
 

@@ -187,6 +187,70 @@ p {
   color: #fff;
 }
 
+
+
+/* Dropdown styling */
+select {
+  width: 293px;
+  padding: 1.3rem 32px 1.3rem 30px;
+  height: 4.9rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #414141;
+  color: white;
+}
+
+select:focus {
+  outline: none;
+}
+
+option {
+  background-color: #414141;
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+
+
+.style-input.wide input[type="checkbox"] {
+  display: none;
+}
+
+.style-input.wide label {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.style-input.wide label:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.style-input.wide input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  text-align: center;
+  color: #fff;
+  background-color: #00bfff;
+}
+
+
 /*replyform*/
 
 .containerform {
