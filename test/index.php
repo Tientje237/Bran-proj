@@ -27,12 +27,12 @@
 
 
 
-    <?php 
+    <!-- <?php 
 	if(isset($_POST['duration'])) {
 		$duration = $_POST['duration'];
 		echo '<script> var duration = ' . $duration . ';</script>';
 	}
-?>
+?> -->
 
 <script>
 	var timerInterval;
