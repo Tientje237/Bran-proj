@@ -1,12 +1,30 @@
 .timer {
 	font-size: 40px;
-	padding: 20px;
+	padding: 35px 0 20px 0;
 	border-radius: 10px;
-	margin: 50px auto;
+	margin: 1rem 0 1rem 0;
 	text-align: center;
 	color: #fff
 }
 
+.t button {
+  padding: 15px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #414141;
+  color: white;
+  border-radius: 4px;
+}
+
+.styled-inputb {
+  float: left;
+  width: 140px;
+  margin: 0 1.5rem 1rem 1.5rem;
+  position: relative;
+  border-radius: 4px;
+
+}
 
 
 
@@ -157,7 +175,7 @@ option:valid ~ label {
   max-width: 100%;
 }
 
-input,
+.form input,
 textarea,
 button {
   padding: 30px;

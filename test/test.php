@@ -69,51 +69,70 @@ $totaalinzet = ($inzet < $inzet2);
         ?> -->
 
 
-<form method="post">
-		<label for="duration">Duration (in seconds): </label>
-		<input type="number" name="duration" id="duration">
-		<button type="start">Start Timer</button>
-	</form>
+
         </section>
         <section class="left2">
-        <p>timer work in progress</p>
         <div class="timer">
-		    <span id="minutes">00</span>:
-		    <span id="seconds">00</span>
-	    </div>
+		<span id="minutes">00</span>
+    :
+		<span id="seconds">00</span>
+	</div>
+  <section class="t">
+  <section class="styled-inputb">
+	  <button id="startBtn">Start</button>
+    </section>
+    <section class="styled-inputb" style="float:right;">
+	  <button id="stopBtn" disabled>Stop</button>
+    </section>
+  </section>
 
-        <?php 
-        $duration = 120;
-		if(isset($_POST['start'])) {
-			echo '<script> var duration = ' . $duration . ';</script>';
+	<script>
+		var duration = 120; // set the duration dynamically here
+
+		var timerInterval;
+		var timerRunning = false;
+
+		function startTimer(duration) {
+			var timer = duration, hours, minutes, seconds;
+			timerInterval = setInterval(function () {
+				minutes = Math.floor(timer / 60);
+				seconds = Math.floor(timer % 60);
+
+				document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+				document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+				if (--timer < 0) {
+					stopTimer();
+					alert("Timer finished!");
+				}
+			}, 1000);
+
+			timerRunning = true;
+			document.getElementById("startBtn").disabled = true;
+			document.getElementById("stopBtn").disabled = false;
 		}
-	    ?>
 
-<script>
-	var timerInterval;
+		function stopTimer() {
+			clearInterval(timerInterval);
+			timerRunning = false;
+			document.getElementById("startBtn").disabled = false;
+			document.getElementById("stopBtn").disabled = true;
+		}
 
-	function startTimer(duration) {
-		var timer = duration, minutes, seconds;
-		timerInterval = setInterval(function () {
-			minutes = Math.floor((timer % 3600) / 60);
-			seconds = Math.floor((timer % 3600) % 60);
-
-			document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-			document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-
-			if (--timer < 0) {
-				clearInterval(timerInterval);
-				alert("Timer finished!");
+		document.getElementById("startBtn").addEventListener("click", function() {
+			if (!timerRunning) {
+				startTimer(duration);
 			}
-		}, 1000);
-	}
+		});
 
-	if(duration) {
-		startTimer(duration);
-	}
-</script>
+		document.getElementById("stopBtn").addEventListener("click", function() {
+			if (timerRunning) {
+				stopTimer();
+			}
+		});
+	</script>
 
-<script src="script.js"></script>
+	<script src="script.js"></script>
 
 
         
@@ -129,27 +148,27 @@ $totaalinzet = ($inzet < $inzet2);
         <form action="reply2.php" method="post">
 
 
-          <section>
+          <section class="form">
             <section class="styled-input">
               <input type="text" name="1" id="1" required>
               <label for="1">1</label>
             </section>
           </section>
-          <section>
+          <section class="form">
             <section class="styled-input" style="float:right;">
               <input type="text" name="2" id="2" required>
               <label for="2">2</label>
             </section>
           </section>
 
-          <section>
+          <section class="form">
             <section class="styled-input wide">
               <input type="text" name="ont" id="ont" required>
               <label for="ont">ontsmetting</label> 
             </section>
           </section>
 
-        <section>
+        <section class="form">
 				  <section class="styled-input wide">
 					  <input type="text" name="terug" id="terug" required>
 					  <label for="terug">Terug</label> 
