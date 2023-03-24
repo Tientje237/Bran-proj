@@ -55,8 +55,10 @@ $totaalinzet = ($inzet < $inzet2);
             echo "<p>Inzet tijd Persoon 2: <strong>".$inzet2. "</strong></p>";
             if ($inzet < $inzet2) {
               echo "<p>totale inzet is: <strong>".$inzet."</strong></p>";
+              $duration = ($inzet * 60);
             } else {
               echo "<p>totale inzet is: <strong>".$inzet2."</strong></p>";
+              $duration = ($inzet2 * 60);
             }
 
         } else {
@@ -80,7 +82,7 @@ $totaalinzet = ($inzet < $inzet2);
   </section>
 
 	<script>
-		var duration = 120; // set the duration dynamically here
+		var duration = "<?php echo $duration; ?>";
 
 		var timerInterval;
 		var timerRunning = false;
