@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/Klein logo.png">
   <link rel="stylesheet" href="style.css">
-  <title>Dark project reply</title>
+  <title>Bran-Proj</title>
 </head>
 
 <body>
@@ -149,20 +149,20 @@ $totaalinzet = ($inzet < $inzet2);
           <section>
             <section class="styled-input">
               <input type="text" name="1" id="1" required>
-              <label for="1">1</label>
+              <label for="1">Golf 1</label>
             </section>
           </section>
           <section>
             <section class="styled-input" style="float:right;">
               <input type="text" name="2" id="2" required>
-              <label for="2">2</label>
+              <label for="2">Golf 2</label>
             </section>
           </section>
 
           <section>
             <section class="styled-input wide">
               <input type="text" name="ont" id="ont" required>
-              <label for="ont">ontsmetting</label> 
+              <label for="ont">Ontsmetting</label> 
             </section>
           </section>
 
