@@ -69,7 +69,68 @@ $totaalinzet = ($inzet < $inzet2);
         ?>
         </section>
         <section class="left2">
-        <p>timer work in progress</p>
+        <div class="timer">
+		<span id="minutes">00</span>
+    :
+		<span id="seconds">00</span>
+	</div>
+  <section class="t">
+  <section class="styled-inputb">
+	  <button id="startBtn">Start</button>
+    </section>
+    <section class="styled-inputb" style="float:right;">
+	  <button id="stopBtn" disabled>Stop</button>
+    </section>
+  </section>
+
+	<script>
+		var duration = 120; // set the duration dynamically here
+
+		var timerInterval;
+		var timerRunning = false;
+
+		function startTimer(duration) {
+			var timer = duration, hours, minutes, seconds;
+			timerInterval = setInterval(function () {
+				minutes = Math.floor(timer / 60);
+				seconds = Math.floor(timer % 60);
+
+				document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+				document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+				if (--timer < 0) {
+					stopTimer();
+					alert("Timer finished!");
+				}
+			}, 1000);
+
+			timerRunning = true;
+			document.getElementById("startBtn").disabled = true;
+			document.getElementById("stopBtn").disabled = false;
+		}
+
+		function stopTimer() {
+			clearInterval(timerInterval);
+			timerRunning = false;
+			document.getElementById("startBtn").disabled = false;
+			document.getElementById("stopBtn").disabled = true;
+		}
+
+		document.getElementById("startBtn").addEventListener("click", function() {
+			if (!timerRunning) {
+				startTimer(duration);
+			}
+		});
+
+		document.getElementById("stopBtn").addEventListener("click", function() {
+			if (timerRunning) {
+				stopTimer();
+			}
+		});
+	</script>
+
+	<script src="script.js"></script>
+
         </section>
         </section>
 

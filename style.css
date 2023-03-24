@@ -203,7 +203,7 @@ strong{
 
 .left1 {
   flex: 1;
-  height: 20rem;
+  height: 17rem;
   width: 24rem;
   margin-top: 2rem;
   margin-left: 10rem;
@@ -211,11 +211,10 @@ strong{
 
 .left2 {
   flex: 1;
-  height: 12rem;
+  height: 15rem;
   width: 24rem;
   margin-top: 2rem;
   margin-left: 10rem;
-  background-color: #1100cb;
   text-align: center;
 }
 
@@ -225,7 +224,6 @@ strong{
   margin-top: 2rem;
   margin-right: 10rem;
   margin-left: 2rem;
-  background-color: rgb(0, 144, 144);
 }
 
 .righttext {
@@ -234,7 +232,6 @@ strong{
   margin-top: 2rem;
   margin-right: 10rem;
   margin-left: 2rem;
-  background-color: rgb(0, 144, 144);
   padding-left: 5rem;
   padding-right: 5rem;
 }
@@ -246,4 +243,33 @@ strong{
 .container2 {
   margin-top: 3.5rem;
   width: 60rem;
+}
+
+
+.timer {
+	font-size: 40px;
+	padding: 42px 0;
+	border-radius: 10px;
+	margin-top: 1rem;
+	text-align: center;
+	color: #fff
+}
+
+.t button {
+  padding: 20px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  background-color: #414141;
+  color: white;
+  border-radius: 4px;
+}
+
+.styled-inputb {
+  float: left;
+  width: 140px;
+  margin: 0 1.5rem;
+  position: relative;
+  border-radius: 4px;
+
 }
