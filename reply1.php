@@ -45,19 +45,16 @@ $totaalinzet = ($inzet < $inzet2);
 
 
         if(isset($_POST["submit"])){
-            // echo "<h1 style='text-align:center'>Bedankt voor u mening over onze service</h1>";
             echo "<p style='text-align:center'>Hier zijn u ingevulde gegevens</p>";
-            echo "<p>Druk van persoon 1 is: <strong>".$_POST["1"]. "</strong></p>";
-            echo "<p>Druk van persoon 2 is: <strong>".$_POST["2"]. "</strong></p>";
-            echo "<p>Ontsmettings Druk is: <strong>".$_POST["ont"]. "</strong></p>";
-            // echo "<p>Te gebruiken lucht is:  <strong>".$lucht. "</strong></p>";
-            // echo "<p>Te gebruiken lucht is:  <strong>".$lucht2. "</strong></p>";
-            echo "<p>Te verbruiken tijd persoon 1 is : <strong>".$tijd. "</strong></p>";
-            echo "<p>Te verbruiken tijd persoon 2 is : <strong>".$tijd2. "</strong></p>";
+            echo "<p>Druk van Pakdrager 1 is: <strong>".$_POST["1"]. "</strong></p>";
+            echo "<p>Druk van Pakdrager 2 is: <strong>".$_POST["2"]. "</strong></p>";
+            echo "<p>Ontsmettings druk is: <strong>".$_POST["ont"]. "</strong></p>";
+            echo "<p>Te verbruiken tijd Pakdrager 1 is : <strong>".$tijd. "</strong></p>";
+            echo "<p>Te verbruiken tijd Pakdrager 2 is : <strong>".$tijd2. "</strong></p>";
             echo "<p>De heenweg is <strong>".$_POST["heen"]. "</strong> minuten lang </p>";
             echo "<p>De terugweg is <strong>".$_POST["terug"]. "</strong> minuten lang </p>";
-            echo "<p>Inzet tijd Persoon 1: <strong>".$inzet. "</strong></p>";
-            echo "<p>Inzet tijd Persoon 2: <strong>".$inzet2. "</strong></p>";
+            echo "<p>Inzet tijd Pakdrager 1: <strong>".$inzet. "</strong></p>";
+            echo "<p>Inzet tijd Pakdrager 2: <strong>".$inzet2. "</strong></p>";
             if ($inzet < $inzet2) {
               echo "<p>totale inzet is: <strong>".$inzet."</strong></p>";
               $duration = ($inzet * 60);
@@ -86,53 +83,9 @@ $totaalinzet = ($inzet < $inzet2);
     </section>
   </section>
 
-	<script>
-		var duration = "<?php echo $duration; ?>";
+	
 
-		var timerInterval;
-		var timerRunning = false;
-
-		function startTimer(duration) {
-			var timer = duration, hours, minutes, seconds;
-			timerInterval = setInterval(function () {
-				minutes = Math.floor(timer / 60);
-				seconds = Math.floor(timer % 60);
-
-				document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
-				document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
-
-				if (--timer < 0) {
-					stopTimer();
-					alert("Timer finished!");
-				}
-			}, 1000);
-
-			timerRunning = true;
-			document.getElementById("startBtn").disabled = true;
-			document.getElementById("stopBtn").disabled = false;
-		}
-
-		function stopTimer() {
-			clearInterval(timerInterval);
-			timerRunning = false;
-			document.getElementById("startBtn").disabled = false;
-			document.getElementById("stopBtn").disabled = true;
-		}
-
-		document.getElementById("startBtn").addEventListener("click", function() {
-			if (!timerRunning) {
-				startTimer(duration);
-			}
-		});
-
-		document.getElementById("stopBtn").addEventListener("click", function() {
-			if (timerRunning) {
-				stopTimer();
-			}
-		});
-	</script>
-
-	<script src="script.js"></script>
+	<script defer src="script.js"></script>
 
         </section>
         </section>
@@ -149,13 +102,13 @@ $totaalinzet = ($inzet < $inzet2);
           <section>
             <section class="styled-input">
               <input type="text" name="1" id="1" required>
-              <label for="1">Golf 1</label>
+              <label for="1">Pakdrager 1</label>
             </section>
           </section>
           <section>
             <section class="styled-input" style="float:right;">
               <input type="text" name="2" id="2" required>
-              <label for="2">Golf 2</label>
+              <label for="2">Pakdrager 2</label>
             </section>
           </section>
 
