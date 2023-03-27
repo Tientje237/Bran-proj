@@ -7,9 +7,12 @@
 <br>
 
 ## To-Do
-* Reply form goed krijgen zodat deze alle ingevulde gegevens laat zien als wat er ingevuld is
-* light en dark theme zodat er een keuze of een optie menu gemaakt kan worden voor dit (dit op aanvraag omdat het ook kan voorkomen dat de site gebruikt kan worden in de nacht uren, en dit dus fijner is voor de ogen.)
-* Timer toevoegen die gestart kan worden door een knop
-* Een 2e formelier kunnen invullen voor een halverwegen controlle
-* optimaliseren voor Tablet (+telefoon als extra optie)
-* eventueel Offline werkend (zodat er zelfs zonder een verbinding het gebruikt kan worden.)
+- [x] Reply form goed krijgen zodat deze alle ingevulde gegevens laat zien als wat er ingevuld is
+- [x] Timer toevoegen die gestart kan worden door een knop
+- [x] Een 2e formelier kunnen invullen voor een halverwegen controlle
+- [ ] optimaliseren voor Tablet (+telefoon als extra optie)
+- [ ] stopwatch of input voor heenweg (Voor timer: 0-29 sec beneden afronden, 30-60 sec boven afronden)
+- [ ] dropdown keuze menu voor de ontsmetting waarde
+- [ ] input veld 1 en 2 naar pakdrager 1/2
+
+- [ ] eventueel Offline werkend (zodat er zelfs zonder een verbinding het gebruikt kan worden.)
