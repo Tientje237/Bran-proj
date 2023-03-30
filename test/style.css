@@ -190,11 +190,13 @@ p {
 
 option {
   float: right;
+  height: 5rem;
 }
 
 
 .optionright{
   text-align: right;
+  height: 10rem;
 }
 
 
