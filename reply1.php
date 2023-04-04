@@ -140,7 +140,7 @@ $totaalinzet = ($inzet < $inzet2);
       <h2 style="text-align:center">Vul de volgende velden in:</h2>
       </section>
       <section class="row input-container">
-        <form action="reply2.php" method="post">
+        <form action="reply2.php" method="post" autocomplete="off">
 
 
           <section>
