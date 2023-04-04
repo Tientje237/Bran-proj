@@ -69,13 +69,23 @@
             <!-- <label for="category">Category:</label> -->
             <select id="category" name="category" required>
               <label value="">Choose a category</label>
-              <option value="">....</option>
+              <option value="">test</option>
               <option value="ja">Ja</option>
               <option value="nee">Nee</option>
             </select>
           </section>
 
-          <!-- <section>
+          <div class="ui selection dropdown">
+            <input type="hidden" name="gender">
+            <i class="dropdown icon"></i>
+            <div class="default text">Gender</div>
+            <div class="menu">
+              <div class="item" data-value="1">Male</div>
+              <div class="item" data-value="0">Female</div>
+            </div>
+          </div>
+
+          <section>
             <section class="styled-input">
               <input type="text" name="heen" id="heen" required>
               <label for="heen">Heen</label>

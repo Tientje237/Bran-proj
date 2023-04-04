@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/Klein logo.png">
   <link rel="stylesheet" href="style.css">
-  <title>Bran-Proj</title>
+  <title>Bran-Proj V2</title>
 </head>
 
 <body>
 
   <header>
     <div class="logo">
-        <a href="index.html">Bran-proj</a>
+    <a href="index.html">Bran-proj V2</a>
     </div>
     <nav>
       </div>
@@ -83,7 +83,51 @@ $totaalinzet = ($inzet < $inzet2);
     </section>
   </section>
 
-	
+  <script>
+		var duration = "<?php echo $duration; ?>";
+
+		var timerInterval;
+		var timerRunning = false;
+
+		function startTimer(duration) {
+			var timer = duration, hours, minutes, seconds;
+			timerInterval = setInterval(function () {
+				minutes = Math.floor(timer / 60);
+				seconds = Math.floor(timer % 60);
+
+				document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+				document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+				if (--timer < 0) {
+					stopTimer();
+					alert("Timer finished!");
+				}
+			}, 1000);
+
+			timerRunning = true;
+			document.getElementById("startBtn").disabled = true;
+			document.getElementById("stopBtn").disabled = false;
+		}
+
+		function stopTimer() {
+			clearInterval(timerInterval);
+			timerRunning = false;
+			document.getElementById("startBtn").disabled = false;
+			document.getElementById("stopBtn").disabled = true;
+		}
+
+		document.getElementById("startBtn").addEventListener("click", function() {
+			if (!timerRunning) {
+				startTimer(duration);
+			}
+		});
+
+		document.getElementById("stopBtn").addEventListener("click", function() {
+			if (timerRunning) {
+				stopTimer();
+			}
+		});
+	</script>
 
 	<script defer src="script.js"></script>
 
@@ -114,8 +158,12 @@ $totaalinzet = ($inzet < $inzet2);
 
           <section>
             <section class="styled-input wide">
-              <input type="text" name="ont" id="ont" required>
-              <label for="ont">Ontsmetting</label> 
+              <select name="ont" id="ont" required>
+                <option value=""></option>
+                <option class="optionright" value="80">80</option>
+                <option class="optionright" value="120">120</option>
+              </select>
+              <label for="ont">Ontsmetting</label>
             </section>
           </section>
 
