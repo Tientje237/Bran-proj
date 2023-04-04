@@ -11,7 +11,7 @@
 - [x] Timer toevoegen die gestart kan worden door een knop
 - [x] Een 2e formelier kunnen invullen voor een halverwegen controlle
 - [ ] optimaliseren voor Tablet (+telefoon als extra optie)
-- [ ] stopwatch of input voor heenweg (Voor timer: 0-29 sec beneden afronden, 30-60 sec boven afronden)
+- [ ] stopwatch of input voor heenweg (Voor stopwatch: 0-29 sec beneden afronden, 30-60 sec boven afronden)
 - [ ] dropdown keuze menu voor de ontsmetting waarde
 - [x] input veld 1 en 2 naar pakdrager 1/2 (alles veranderd van persoon naar Pakdrager)
 
