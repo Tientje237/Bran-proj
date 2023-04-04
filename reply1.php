@@ -159,7 +159,6 @@ $totaalinzet = ($inzet < $inzet2);
           <section>
             <section class="styled-input wide">
               <select name="ont" id="ont" required>
-                <option value=""></option>
                 <option class="optionright" value="80">80</option>
                 <option class="optionright" value="120">120</option>
               </select>
