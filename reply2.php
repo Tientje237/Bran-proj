@@ -13,7 +13,7 @@
 <body>
 
 <header>
-  <div>Bran-proj V2</div>
+  <div><a href="index.html">Bran-proj V2</a></div>
 </header>
 
   <main>
@@ -33,6 +33,19 @@ $tijd2 = ($lucht2 / 10);
 $inzet = ($tijd - $terug);
 $inzet2 = ($tijd2 - $terug);
 $totaalinzet = ($inzet < $inzet2);
+
+require_once("database.php");
+
+    $data = [
+        'pak1' => $pak1,
+        'pak2' => $pak2,
+        'ont' => $ont,
+        'terug' => $terug,
+    ];
+
+    $insert = "INSERT INTO tweede (Pakdrager1, Pakdrager2, Ontsmetting, Terug, Datum) VALUES (:pak1, :pak2, :ont, :terug, CURRENT_TIMESTAMP)";
+    $stmt = $db->prepare($insert);
+    $stmt->execute($data);
 
         if(isset($_POST["submit2"])){
             echo "<p style='text-align:center'>Hier zijn u ingevulde gegevens</p>";
