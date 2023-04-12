@@ -12,15 +12,9 @@
 
 <body>
 
-  <header>
-    <div class="logo">
-    <a href="index.html">Bran-proj V2</a>
-    </div>
-    <nav>
-      </div>
-    </nav>
-    <div class="toggle"></div>
-  </header>
+<header>
+  <div>Bran-proj V2</div>
+</header>
 
 
 
@@ -30,13 +24,13 @@
         <section class="left1">
         <?php
 
-$p1 = $_POST['1'];
-$p2 = $_POST['2'];
+$pak1 = $_POST['pak1'];
+$pak2 = $_POST['pak2'];
 $ont = $_POST['ont'];
 $heen = $_POST['heen'];
 $terug = $_POST['terug'];
-$lucht = ($p1 - $ont);
-$lucht2 = ($p2 - $ont);
+$lucht = ($pak1 - $ont);
+$lucht2 = ($pak2 - $ont);
 $tijd = ($lucht / 10);
 $tijd2 = ($lucht2 / 10);
 $inzet = ($tijd - $heen - $terug);
@@ -46,13 +40,13 @@ $totaalinzet = ($inzet < $inzet2);
 
         if(isset($_POST["submit"])){
             echo "<p style='text-align:center'>Hier zijn u ingevulde gegevens</p>";
-            echo "<p>Druk van Pakdrager 1 is: <strong>".$_POST["1"]. "</strong></p>";
-            echo "<p>Druk van Pakdrager 2 is: <strong>".$_POST["2"]. "</strong></p>";
-            echo "<p>Ontsmettings druk is: <strong>".$_POST["ont"]. "</strong></p>";
+            echo "<p>Druk van Pakdrager 1 is: <strong>".$pak1. "</strong></p>";
+            echo "<p>Druk van Pakdrager 2 is: <strong>".$pak2. "</strong></p>";
+            echo "<p>Ontsmettings druk is: <strong>".$ont. "</strong></p>";
             echo "<p>Te verbruiken tijd Pakdrager 1 is : <strong>".$tijd. "</strong></p>";
             echo "<p>Te verbruiken tijd Pakdrager 2 is : <strong>".$tijd2. "</strong></p>";
-            echo "<p>De heenweg is <strong>".$_POST["heen"]. "</strong> minuten lang </p>";
-            echo "<p>De terugweg is <strong>".$_POST["terug"]. "</strong> minuten lang </p>";
+            echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
+            echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";
             echo "<p>Inzet tijd Pakdrager 1: <strong>".$inzet. "</strong></p>";
             echo "<p>Inzet tijd Pakdrager 2: <strong>".$inzet2. "</strong></p>";
             if ($inzet < $inzet2) {
@@ -145,22 +139,22 @@ $totaalinzet = ($inzet < $inzet2);
 
           <section>
             <section class="styled-input">
-              <input type="text" name="1" id="1" required>
-              <label for="1">Pakdrager 1</label>
+              <input type="text" name="pak1" id="pak1" required>
+              <label for="pak1">Pakdrager 1</label>
             </section>
           </section>
           <section>
             <section class="styled-input" style="float:right;">
-              <input type="text" name="2" id="2" required>
-              <label for="2">Pakdrager 2</label>
+              <input type="text" name="pak2" id="pak2" required>
+              <label for="pak2">Pakdrager 2</label>
             </section>
           </section>
 
           <section>
             <section class="styled-input wide">
               <select name="ont" id="ont" required>
-                <option class="optionright" value="80">80</option>
-                <option class="optionright" value="120">120</option>
+                <option class="ontoption-position" value="80">80</option>
+                <option class="ontoption-position" value="120">120</option>
               </select>
               <label for="ont">Ontsmetting</label>
             </section>

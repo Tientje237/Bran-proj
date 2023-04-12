@@ -69,11 +69,6 @@ nav {
   transition: 0.3s;
 }
 
-.logo {
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
 #page-container {
   position: relative;
   min-height: 84vh;
@@ -81,7 +76,7 @@ nav {
 
 /*form*/
 
-.container {
+.input-toptext {
   margin-top: 2rem;
 }
 
@@ -152,11 +147,6 @@ textarea:focus ~ span {
   transition: all 0.075s ease;
 }
 
-textarea {
-  width: 100%;
-  min-height: 15em;
-}
-
 .input-container {
   width: 650px;
   max-width: 100%;
@@ -189,7 +179,7 @@ p {
 }
 
 
-.optionright{
+.ontoption-position{
   text-align: right;
   font-size: 1rem;
 }
