@@ -34,19 +34,6 @@ $inzet = ($tijd - $terug);
 $inzet2 = ($tijd2 - $terug);
 $totaalinzet = ($inzet < $inzet2);
 
-require_once("database.php");
-
-    $data = [
-        'pak1' => $pak1,
-        'pak2' => $pak2,
-        'ont' => $ont,
-        'terug' => $terug,
-    ];
-
-    $insert = "INSERT INTO tweede (Pakdrager1, Pakdrager2, Ontsmetting, Terug, Datum) VALUES (:pak1, :pak2, :ont, :terug, CURRENT_TIMESTAMP)";
-    $stmt = $db->prepare($insert);
-    $stmt->execute($data);
-
         if(isset($_POST["submit2"])){
             echo "<p style='text-align:center'>Hier zijn u ingevulde gegevens</p>";
             echo "<p>Druk van Pakdrager 1 is: <strong>".$pak1. "</strong></p>";
@@ -68,7 +55,30 @@ require_once("database.php");
         } else {
             echo"<h2 style='text-align:center'>U bent niet correct hier op de pagina gekomen.</h2>";
         }
+
+
+        require_once("database.php");
+
+        $duur = $duration / 60;
+        $data = [
+        'pak1' => $pak1,
+        'pak2' => $pak2,
+        'ont' => $ont,
+        'tijd' => $tijd,
+        'tijd2' => $tijd2,
+        'terug' => $terug,
+        'inzet' => $inzet,
+        'inzet2' => $inzet2,
+        'duur' => $duur,
+    ];
+
+    $insert = "INSERT INTO tweede (Pakdrager1, Pakdrager2, gebruiktijd1, gebruiktijd2, Ontsmetting, Terug, Inzet1, Inzet2, TotInzet, Datum) VALUES (:pak1, :pak2, :ont, :tijd, :tijd2, :terug, :inzet, :inzet2, :duur, CURRENT_TIMESTAMP)";
+    $stmt = $db->prepare($insert);
+    $stmt->execute($data);
+
         ?>
+
+
         </section>
         <section class="left2">
         <div class="timer">

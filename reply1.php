@@ -35,21 +35,6 @@ $inzet = ($tijd - $heen - $terug);
 $inzet2 = ($tijd2 - $heen - $terug);
 $totaalinzet = ($inzet < $inzet2);
 
-require_once("database.php");
-
-    $data = [
-        'pak1' => $pak1,
-        'pak2' => $pak2,
-        'ont' => $ont,
-        'heen' => $heen,
-        'terug' => $terug,
-    ];
-
-    $insert = "INSERT INTO eerste (Pakdrager1, Pakdrager2, Ontsmetting, Heen, Terug, Datum) VALUES (:pak1, :pak2, :ont, :heen, :terug, CURRENT_TIMESTAMP)";
-    $stmt = $db->prepare($insert);
-    $stmt->execute($data);
-
-
         if(isset($_POST["submit"])){
             echo "<p style='text-align:center'>Hier zijn u ingevulde gegevens</p>";
             echo "<p>Druk van Pakdrager 1 is: <strong>".$pak1. "</strong></p>";
@@ -72,7 +57,31 @@ require_once("database.php");
         } else {
             echo"<h2 style='text-align:center'>U bent niet correct hier op de pagina gekomen.</h2>";
         }
+
+
+        require_once("database.php");
+
+        $duur = $duration / 60;
+        $data = [
+        'pak1' => $pak1,
+        'pak2' => $pak2,
+        'ont' => $ont,
+        'tijd' => $tijd,
+        'tijd2' => $tijd2,
+        'heen' => $heen,
+        'terug' => $terug,
+        'inzet' => $inzet,
+        'inzet2' => $inzet2,
+        'duur' => $duur,
+    ];
+
+    $insert = "INSERT INTO eerste (Pakdrager1, Pakdrager2, gebruiktijd1, gebruiktijd2, Ontsmetting, Heen, Terug, Inzet1, Inzet2, TotInzet, Datum	) VALUES (:pak1, :pak2, :ont, :tijd, :tijd2, :heen, :terug, :inzet, :inzet2, :duur, CURRENT_TIMESTAMP)";
+    $stmt = $db->prepare($insert);
+    $stmt->execute($data);
+
         ?>
+
+
         </section>
         <section class="left2">
         <div class="timer">
@@ -88,6 +97,7 @@ require_once("database.php");
 	  <button id="stopBtn" disabled>Stop</button>
     </section>
   </section>
+
 
   <script>
 		var duration = "<?php echo $duration; ?>";
@@ -136,6 +146,8 @@ require_once("database.php");
 	</script>
 
 	<script defer src="script.js"></script>
+
+
 
         </section>
         </section>
