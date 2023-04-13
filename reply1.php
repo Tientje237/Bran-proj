@@ -163,13 +163,13 @@ $totaalinzet = ($inzet < $inzet2);
 
           <section>
             <section class="styled-input">
-              <input type="text" name="pak1" id="pak1" required>
+              <input type="text" name="pak1" id="pak1" min="80" max="320" required>
               <label for="pak1">Pakdrager 1</label>
             </section>
           </section>
           <section>
             <section class="styled-input" style="float:right;">
-              <input type="text" name="pak2" id="pak2" required>
+              <input type="text" name="pak2" id="pak2" min="80" max="320" required>
               <label for="pak2">Pakdrager 2</label>
             </section>
           </section>
@@ -186,7 +186,7 @@ $totaalinzet = ($inzet < $inzet2);
 
         <section>
 				  <section class="styled-input wide">
-					  <input type="text" name="terug" id="terug" required>
+					  <input type="number" name="terug" id="terug" required>
 					  <label for="terug">Terug</label> 
 				  </section>
 			  </section>
