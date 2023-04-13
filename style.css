@@ -124,7 +124,7 @@ option:valid ~ label {
 
 input,
 textarea,
-button, 
+button,
 select {
   padding: 30px;
   border: 0;
@@ -167,27 +167,27 @@ button {
 }
 
 h1 {
-  color: #fff;
+  color: #ff0000;
+  font-size: 1.5rem;
 }
 
 h2 {
   color: #fff;
 }
 
+h3 {
+  color: #ff0000;
+  font-size: 1.3rem;
+}
+
 p {
   color: #fff;
 }
 
-
-.ontoption-position{
+.ontoption-position {
   text-align: right;
   font-size: 1rem;
 }
-
-
-
-
-
 
 /*replyform*/
 
@@ -199,7 +199,7 @@ p {
   display: flex;
 }
 
-strong{
+strong {
   color: green;
 }
 
@@ -247,14 +247,13 @@ strong{
   width: 60rem;
 }
 
-
 .timer {
-	font-size: 40px;
-	padding: 42px 0;
-	border-radius: 10px;
-	margin-top: 1rem;
-	text-align: center;
-	color: #fff
+  font-size: 40px;
+  padding: 42px 0;
+  border-radius: 10px;
+  margin-top: 1rem;
+  text-align: center;
+  color: #fff;
 }
 
 .t button {
@@ -273,5 +272,4 @@ strong{
   margin: 0 1.5rem;
   position: relative;
   border-radius: 4px;
-
 }

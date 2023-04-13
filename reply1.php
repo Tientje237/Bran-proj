@@ -42,8 +42,16 @@ $totaalinzet = ($inzet < $inzet2);
             echo "<p>Ontsmettings druk is: <strong>".$ont. "</strong></p>";
             echo "<p>Te verbruiken tijd Pakdrager 1 is : <strong>".$tijd. "</strong></p>";
             echo "<p>Te verbruiken tijd Pakdrager 2 is : <strong>".$tijd2. "</strong></p>";
-            echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
-            echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";
+            if ($heen < $terug) {
+              echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
+              echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";
+              $duration = ($inzet * 60);
+            } else {
+              echo "<h1>De Berekening klopt niet!!</h1>";
+              echo "<h3>Heenweg langer dan terugweg!</h3>";
+            }
+            // echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
+            // echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";
             echo "<p>Inzet tijd Pakdrager 1: <strong>".$inzet. "</strong></p>";
             echo "<p>Inzet tijd Pakdrager 2: <strong>".$inzet2. "</strong></p>";
             if ($inzet < $inzet2) {
