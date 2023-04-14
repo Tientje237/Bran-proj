@@ -48,11 +48,11 @@
               echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
               echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";
             } else {
-              echo "<h3>De Berekening klopt niet!!</h3>";
-              echo "<h3>Heenweg langer dan terugweg!</h3>";
+              echo "<h3>De Berekening kan niet kloppen!!</h3>";
+              echo "<h3>Heenweg is langer dan terugweg!</h3>";
+              echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
+              echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";
             }
-            // echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
-            // echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";
             echo "<p>Inzet tijd Pakdrager 1: <strong>".$inzet. "</strong></p>";
             echo "<p>Inzet tijd Pakdrager 2: <strong>".$inzet2. "</strong></p>";
             if ($inzet < $inzet2) {
