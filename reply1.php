@@ -22,20 +22,22 @@
         <section class="left1">
         <?php
 
-$pak1 = $_POST['pak1'];
-$pak2 = $_POST['pak2'];
-$ont = $_POST['ont'];
-$heen = $_POST['heen'];
-$terug = $_POST['terug'];
-$lucht = ($pak1 - $ont);
-$lucht2 = ($pak2 - $ont);
-$tijd = ($lucht / 10);
-$tijd2 = ($lucht2 / 10);
-$inzet = ($tijd - $heen - $terug);
-$inzet2 = ($tijd2 - $heen - $terug);
-$totaalinzet = ($inzet < $inzet2);
-
         if(isset($_POST["submit"])){
+
+          $pak1 = $_POST['pak1'];
+          $pak2 = $_POST['pak2'];
+          $ont = $_POST['ont'];
+          $heen = $_POST['heen'];
+          $terug = $_POST['terug'];
+          $lucht = ($pak1 - $ont);
+          $lucht2 = ($pak2 - $ont);
+          $tijd = ($lucht / 10);
+          $tijd2 = ($lucht2 / 10);
+          $inzet = ($tijd - $heen - $terug);
+          $inzet2 = ($tijd2 - $heen - $terug);
+          $totaalinzet = ($inzet < $inzet2);
+
+
             echo "<p style='text-align:center'>Hier zijn u ingevulde gegevens</p>";
             echo "<p>Druk van Pakdrager 1 is: <strong>".$pak1. "</strong></p>";
             echo "<p>Druk van Pakdrager 2 is: <strong>".$pak2. "</strong></p>";
@@ -45,9 +47,8 @@ $totaalinzet = ($inzet < $inzet2);
             if ($heen < $terug) {
               echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
               echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";
-              $duration = ($inzet * 60);
             } else {
-              echo "<h1>De Berekening klopt niet!!</h1>";
+              echo "<h3>De Berekening klopt niet!!</h3>";
               echo "<h3>Heenweg langer dan terugweg!</h3>";
             }
             // echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
@@ -62,30 +63,30 @@ $totaalinzet = ($inzet < $inzet2);
               $duration = ($inzet2 * 60);
             }
 
+            require_once("database.php");
+
+            $duur = $duration / 60;
+            $data = [
+            'pak1' => $pak1,
+            'pak2' => $pak2,
+            'ont' => $ont,
+            'tijd' => $tijd,
+            'tijd2' => $tijd2,
+            'heen' => $heen,
+            'terug' => $terug,
+            'inzet' => $inzet,
+            'inzet2' => $inzet2,
+            'duur' => $duur,
+        ];
+    
+        $insert = "INSERT INTO eerste (Pakdrager1, Pakdrager2, gebruiktijd1, gebruiktijd2, Ontsmetting, Heen, Terug, Inzet1, Inzet2, TotInzet, Datum	) VALUES (:pak1, :pak2, :ont, :tijd, :tijd2, :heen, :terug, :inzet, :inzet2, :duur, CURRENT_TIMESTAMP)";
+        $stmt = $db->prepare($insert);
+        $stmt->execute($data);
+
         } else {
             echo"<h2 style='text-align:center'>U bent niet correct hier op de pagina gekomen.</h2>";
         }
 
-
-        require_once("database.php");
-
-        $duur = $duration / 60;
-        $data = [
-        'pak1' => $pak1,
-        'pak2' => $pak2,
-        'ont' => $ont,
-        'tijd' => $tijd,
-        'tijd2' => $tijd2,
-        'heen' => $heen,
-        'terug' => $terug,
-        'inzet' => $inzet,
-        'inzet2' => $inzet2,
-        'duur' => $duur,
-    ];
-
-    $insert = "INSERT INTO eerste (Pakdrager1, Pakdrager2, gebruiktijd1, gebruiktijd2, Ontsmetting, Heen, Terug, Inzet1, Inzet2, TotInzet, Datum	) VALUES (:pak1, :pak2, :ont, :tijd, :tijd2, :heen, :terug, :inzet, :inzet2, :duur, CURRENT_TIMESTAMP)";
-    $stmt = $db->prepare($insert);
-    $stmt->execute($data);
 
         ?>
 
@@ -105,7 +106,6 @@ $totaalinzet = ($inzet < $inzet2);
 	  <button id="stopBtn" disabled>Stop</button>
     </section>
   </section>
-
 
   <script>
 		var duration = "<?php echo $duration; ?>";
@@ -155,11 +155,8 @@ $totaalinzet = ($inzet < $inzet2);
 
 	<script defer src="script.js"></script>
 
-
-
         </section>
         </section>
-
 
         <section class="right">
       <section class="row">
@@ -193,11 +190,11 @@ $totaalinzet = ($inzet < $inzet2);
           </section>
 
         <section>
-				  <section class="styled-input wide">
-					  <input type="number" name="terug" id="terug" required>
-					  <label for="terug">Terug</label> 
-				  </section>
-			  </section>
+          <section class="styled-input wide">
+            <input type="number" name="terug" id="terug" required>
+            <label for="terug">Terug</label> 
+          </section>
+        </section>
 
           <section class="styled-input wide">
             <button type="submit2" name="submit2" id="submit2">Verzenden</button>
@@ -208,9 +205,6 @@ $totaalinzet = ($inzet < $inzet2);
   </section>
   </main>
 
-
-
   <footer>Made by: Tino</footer>
 </body>
-
 </html>
