@@ -100,7 +100,7 @@
 	</div>
   <section class="t">
   <section class="styled-inputb">
-	  <button id="startBtn">Start</button>
+    <button id="startBtn">Start</button>
     </section>
     <section class="styled-inputb" style="float:right;">
 	  <button id="stopBtn" disabled>Stop</button>
