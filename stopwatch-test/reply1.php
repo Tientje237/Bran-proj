@@ -37,7 +37,7 @@
           // $inzet2 = ($tijd2 - $heen - $terug);
           $totaalinzet = ($inzet < $inzet2);
 
-          echo $_POST['stopwatchValue'];
+          echo $_POST['stopwatchvalue'];
 
 
             echo "<p style='text-align:center'>Hier zijn u ingevulde gegevens</p>";
