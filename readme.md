@@ -9,7 +9,6 @@
 ## To-Do
 
 - [ ] optimaliseren voor Tablet (+telefoon als extra optie).
-- [ ] stopwatch of input voor heenweg (Voor stopwatch: 0-29 sec beneden afronden, 30-60 sec boven afronden).
 
 ### Done
 - [x] Reply form goed krijgen zodat deze alle ingevulde gegevens laat zien als wat er ingevuld is.
@@ -19,4 +18,5 @@
 - [x] input veld 1 en 2 naar pakdrager 1/2 (alles veranderd van persoon naar Pakdrager).
 - [x] Inputs worden opgeslagen in de database.
 - [x] Heenweg kan niet langer zijn dan terug weg (je krijgt een melding en er staat in rode text dat het niet mogelijk is).
+- [x] stopwatch of input voor heenweg (Voor stopwatch: 0-29 sec beneden afronden, 30-60 sec boven afronden).
 
