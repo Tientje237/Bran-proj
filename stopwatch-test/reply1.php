@@ -33,11 +33,9 @@
           $lucht2 = ($pak2 - $ont);
           $tijd = ($lucht / 10);
           $tijd2 = ($lucht2 / 10);
-          // $inzet = ($tijd - $heen - $terug);
-          // $inzet2 = ($tijd2 - $heen - $terug);
+          $inzet = ($tijd - $heen - $terug);
+          $inzet2 = ($tijd2 - $heen - $terug);
           $totaalinzet = ($inzet < $inzet2);
-
-          echo $_POST['stopwatchvalue'];
 
 
             echo "<p style='text-align:center'>Hier zijn u ingevulde gegevens</p>";
@@ -155,7 +153,6 @@
 		});
 	</script>
 
-	<script defer src="script.js"></script>
 
         </section>
         </section>

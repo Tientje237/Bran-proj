@@ -7,7 +7,6 @@ const startButton = document.getElementById("startButton");
 const stopButton = document.getElementById("stopButton");
 const stopwatchResultInput = document.getElementById("heen");
 const stopwatchvalueinput = document.getElementById("stopwatchvalue");
-// stopwatchvalue.value = stopwatchResult.value;
 
 function startTimer() {
   startTime = Date.now() - elapsedTime;
@@ -31,8 +30,7 @@ function updateTimer() {
   const sec = elapsedTime / 1000;
   const min = sec / 60
   const stopwatchvalue = Math.round(min)
-  console.log(stopwatchvalue)
-  stopwatchvalueinput.value = stopwatchvalue.value;
+  stopwatchvalueinput.value = stopwatchvalue;
 }
 
 function formatTime(time) {
