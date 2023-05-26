@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/Klein logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <title>Bran-Proj V2</title>
+</head>
+
+<body>
+
+  <header>
+    <div>Bran-proj V2</div>
+  </header>
+
+  <main>
+    <section class="input-toptext">
+      <h2 style="text-align:center">Vul de volgende velden in:</h2>
+
+      <section class="input-container">
+        <form action="reply1.php" method="post" autocomplete="off">
+
+
+          <section>
+            <section class="styled-input">
+              <input type="number" name="pak1" id="pak1" min="80" max="320" required>
+              <label for="pak1">Pakdrager 1</label>
+            </section>
+          </section>
+          <section>
+            <section class="styled-input" style="float:right;">
+              <input type="number" name="pak2" id="pak2" min="80" max="320" required>
+              <label for="pak2">Pakdrager 2</label>
+            </section>
+          </section>
+
+
+          <section>
+            <section class="styled-input wide">
+              <select name="ont" id="ont" required>
+                <option class="ontoption-position" value="80">80</option>
+                <option class="ontoption-position" value="120">120</option>
+              </select>
+              <label for="ont">Ontsmetting</label>
+            </section>
+          </section>
+
+
+
+
+
+          <section style="text-align: center;">
+            <h2>Stopwatch:</h2>
+            <div id="stopwatch">00:00</div>
+            <section class="styled-input">
+              <button id="startButton">Start</button>
+            </section>
+            <section class="styled-input" style="float:right;">
+              <button id="stopButton">Stop</button>
+            </section>
+          </section>
+
+          <input type="hidden" id="stopwatchvalue" name="stopwatchvalue" value="" required>
+
+          <section>
+            <section class="styled-input">
+              <input type="text" name="stopwatchResult" id="heen" required>
+              <label for="heen">Heen</label>
+            </section>
+          </section>
+          <section>
+            <section class="styled-input" style="float:right;">
+              <input type="number" name="terug" id="terug" required>
+              <label for="terug">Terug</label>
+            </section>
+          </section>
+
+
+          <section class="styled-input wide">
+            <button type="submit" name="submit" id="submit">Verzenden</button>
+          </section>
+        </form>
+      </section>
+    </section>
+  </main>
+
+
+  <footer>Made by: Tino</footer>
+</body>
+
+</html>
