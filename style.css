@@ -36,7 +36,7 @@ footer {
   text-align: center;
   position: static;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   height: 8vh;
   flex-shrink: 0;
 }
@@ -52,7 +52,6 @@ a {
 }
 
 header {
-  width: 100%;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -104,9 +103,6 @@ option:valid ~ label {
 @media only screen and (max-width: 768px) {
   .styled-input {
     width: 100%;
-  }
-  body{
-    width: 700px;
   }
 }
 
@@ -193,16 +189,25 @@ p {
   font-size: 1rem;
 }
 
+#stopwatch {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#startButton {
+background-color: green
+}
+
+#stopButton {
+  background-color: red
+}
+
 /*replyform*/
 
 .containerform {
   display: flex;
-}
-
-@media only screen and (max-width: 1290px) {
-  .containerform {
-    display: table-row;
-  }
 }
 
 .containerform2 {
@@ -216,7 +221,7 @@ strong {
 .left1 {
   flex: 1;
   height: 17rem;
-  width: 25rem;
+  width: 24rem;
   margin-top: 2rem;
   margin-left: 10rem;
 }
@@ -236,19 +241,6 @@ strong {
   margin-top: 2rem;
   margin-right: 10rem;
   margin-left: 2rem;
-}
-
-@media only screen and (max-width: 1400px) {
-  .left1 {
-    margin-left: 8rem;
-  }
-  .left2 {
-    margin-left: 8rem;
-  }
-  .right {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
 }
 
 .righttext {

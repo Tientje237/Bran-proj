@@ -27,15 +27,17 @@
           $pak1 = $_POST['pak1'];
           $pak2 = $_POST['pak2'];
           $ont = $_POST['ont'];
-          $heen = $_POST['heen'];
+          $heen = $_POST['stopwatchvalue'];
           $terug = $_POST['terug'];
           $lucht = ($pak1 - $ont);
           $lucht2 = ($pak2 - $ont);
           $tijd = ($lucht / 10);
           $tijd2 = ($lucht2 / 10);
-          $inzet = ($tijd - $heen - $terug);
-          $inzet2 = ($tijd2 - $heen - $terug);
+          // $inzet = ($tijd - $heen - $terug);
+          // $inzet2 = ($tijd2 - $heen - $terug);
           $totaalinzet = ($inzet < $inzet2);
+
+          echo $_POST['stopwatchvalue'];
 
 
             echo "<p style='text-align:center'>Hier zijn u ingevulde gegevens</p>";
@@ -48,7 +50,7 @@
               echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
               echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";
             } else {
-              echo "<h3>De Berekening is mogelijk incorrect!</h3>";
+              echo "<h3>De Berekening kan niet kloppen!!</h3>";
               echo "<h3>Heenweg is langer dan terugweg!</h3>";
               echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
               echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";

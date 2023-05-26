@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/Klein logo.png">
   <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
   <title>Bran-Proj V2</title>
 </head>
 
@@ -49,10 +50,24 @@
           </section>
 
 
+          <input type="hidden" id="stopwatchvalue" name="stopwatchvalue" value="">
+  
+  
+          <section style="text-align: center;">
+            <h2>Stopwatch:</h2>
+            <div id="stopwatch">00:00</div>
+            <section class="styled-input">
+              <button id="startButton">Start</button>
+            </section>
+            <section class="styled-input" style="float:right;">
+              <button id="stopButton">Stop</button>
+            </section>
+          </section>
+
 
           <section>
             <section class="styled-input">
-              <input type="number" name="heen" id="heen" required>
+              <input type="text" name="stopwatchResult" id="heen" required>
               <label for="heen">Heen</label>
             </section>
           </section>
