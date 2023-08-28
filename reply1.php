@@ -79,7 +79,7 @@
             'duur' => $duur,
         ];
     
-        $insert = "INSERT INTO eerste (Pakdrager1, Pakdrager2, gebruiktijd1, gebruiktijd2, Ontsmetting, Heen, Terug, Inzet1, Inzet2, TotInzet, Datum	) VALUES (:pak1, :pak2, :ont, :tijd, :tijd2, :heen, :terug, :inzet, :inzet2, :duur, CURRENT_TIMESTAMP)";
+        $insert = "INSERT INTO eerste (Pakdrager1, Pakdrager2, gebruiktijd1, gebruiktijd2, Ontsmetting, Heen, Terug, Inzet1, Inzet2, TotInzet, Datum) VALUES (:pak1, :pak2, :ont, :tijd, :tijd2, :heen, :terug, :inzet, :inzet2, :duur, CURRENT_TIMESTAMP)";
         $stmt = $db->prepare($insert);
         $stmt->execute($data);
 

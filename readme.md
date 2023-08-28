@@ -20,3 +20,8 @@
 - [x] Heenweg kan niet langer zijn dan terug weg (je krijgt een melding en er staat in rode text dat het niet mogelijk is).
 - [x] stopwatch of input voor heenweg (Voor stopwatch: 0-29 sec beneden afronden, 30-60 sec boven afronden).
 
+## Naar kijken
+
+- verzend form = starten timer (op beide input forms)
+- heenweg = aan terug geen melding
+- 
