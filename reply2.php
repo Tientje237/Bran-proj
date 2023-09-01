@@ -84,9 +84,9 @@
         </section>
         <section class="left2">
         <div class="timer">
-		<span id="minutes">00</span>
+		<span id="minutes"></span>
     :
-		<span id="seconds">00</span>
+		<span id="seconds"></span>
 	</div>
   <section class="t">
   <section class="styled-inputb">
