@@ -103,6 +103,10 @@
 		var timerInterval;
 		var timerRunning = false;
 
+    window.onload = function() {
+      startTimer(duration);
+};
+
 		function startTimer(duration) {
 			var timer = duration, hours, minutes, seconds;
 			timerInterval = setInterval(function () {

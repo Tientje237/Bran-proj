@@ -44,7 +44,7 @@
             echo "<p>Ontsmettings druk is: <strong>".$ont. "</strong></p>";
             echo "<p>Te verbruiken tijd Pakdrager 1 is : <strong>".$tijd. "</strong></p>";
             echo "<p>Te verbruiken tijd Pakdrager 2 is : <strong>".$tijd2. "</strong></p>";
-            if ($heen < $terug) {
+            if ($heen <= $terug) {
               echo "<p>De heenweg is <strong>".$heen. "</strong> minuten lang </p>";
               echo "<p>De terugweg is <strong>".$terug. "</strong> minuten lang </p>";
             } else {
@@ -113,8 +113,12 @@
 		var timerInterval;
 		var timerRunning = false;
 
+    window.onload = function() {
+      startTimer(duration);
+};
+
 		function startTimer(duration) {
-			var timer = duration, hours, minutes, seconds;
+			var timer = duration, minutes, seconds;
 			timerInterval = setInterval(function () {
 				minutes = Math.floor(timer / 60);
 				seconds = Math.floor(timer % 60);
