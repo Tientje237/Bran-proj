@@ -210,6 +210,12 @@
   </section>
   </main>
 
-  <footer>Made by: Tino</footer>
+  <footer>
+    <div>
+      <!-- <a href=""> -->
+        Made by: Tino
+      <!-- </a> -->
+    </div>
+  </footer>
 </body>
 </html>
