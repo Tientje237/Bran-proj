@@ -157,13 +157,15 @@
         <h1>Bedankt voor het gebruiken van deze site.</h1>
 
         <p>
-          Op dit moment word er nog hard gewerkt aan dit project en is het nog in de test fase. Als je feedback heb hoor ik dit 
-          graag je kan me dan benaderen via mijn discord of je feedback achterlaten bij Sven.</p>
+          Op dit moment word er nog gewerkt aan dit project en is het nog in de test fase. 
+          <br> 
+          Als je feedback heb hoor ik dit graag, je kan me daarvoor benaderen via de Email.
+        </p>
 
         <br>
         <br>
-        <p>Mijn Discord:</p>
-        <p>Tientje#4560</p>
+        <p>Mijn Emailadres:</p>
+        <p>TinovanHoorn@gmail.com</p>
 
         </section>
   </main>
