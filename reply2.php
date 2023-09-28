@@ -170,6 +170,12 @@
         </section>
   </main>
 
-  <footer>Made by: Tino</footer>
+  <footer>
+    <div>
+      <!-- <a href="https://www.linkedin.com/in/tinovanhoorn/"> -->
+        Made by: Tino
+      <!-- </a> -->
+    </div>
+  </footer>
 </body>
 </html>
