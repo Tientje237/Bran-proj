@@ -158,23 +158,16 @@
 
         <p>
           Op dit moment word er nog gewerkt aan dit project en is het nog in de test fase. 
-          <br> 
-          Als je feedback heb hoor ik dit graag, je kan me daarvoor benaderen via de Email.
         </p>
-
-        <br>
-        <br>
-        <p>Mijn Emailadres:</p>
-        <p>TinovanHoorn@gmail.com</p>
 
         </section>
   </main>
 
   <footer>
     <div>
-      <!-- <a href="https://www.linkedin.com/in/tinovanhoorn/"> -->
+      <a href="https://www.linkedin.com/in/tinovanhoorn/">
         Made by: Tino
-      <!-- </a> -->
+      </a>
     </div>
   </footer>
 </body>

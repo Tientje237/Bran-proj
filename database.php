@@ -1,6 +1,6 @@
 <?php
 try {
-    $db = new PDO('mysql:host=localhost;dbname=bran-proj', 'root', '');
+    $db = new PDO('mysql:host=localhost;dbname=brand-proj', 'root', '');
 }
 
 catch(PDOException $e) {
